@@ -3,6 +3,8 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 
 function Subtotal() {
+
+
   return (
     <div className="subtotal">
        <CurrencyFormat
@@ -18,7 +20,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={0} // Part of the homework
+        value={0}// Part of the homework
         displayType={"text"}
         thousandSeparator={true}
         prefix={"$"}
