@@ -23,7 +23,7 @@ function Subtotal() {
         value={0}// Part of the homework
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"₹"}
       />
 
       <button>Proceed to checkout</button>

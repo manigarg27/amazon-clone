@@ -8,6 +8,8 @@ import Checkout from "./Checkout";
 
 function App() {
   return (
+ 
+
     //BEM
     <Router>
     <div className="app">
@@ -23,6 +25,8 @@ function App() {
       </Switch>
     </div>
     </Router>
+     
+
   );
 }
 
