@@ -8,12 +8,13 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
-import Orders from "./Orders";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from './Orders';
 
 const promise = loadStripe(
-  "pk_test_51Hz7wRBBW5JF6phFLDarUfjPjSDWVvdDp91ZX3CNHejqv1bdH3EmjMJk76XiBGy3GyoHiD8Ouzq8iKzhzxiKsY5a00yFHRnqtH");
+  "pk_test_51Hz7wRBBW5JF6phFLDarUfjPjSDWVvdDp91ZX3CNHejqv1bdH3EmjMJk76XiBGy3GyoHiD8Ouzq8iKzhzxiKsY5a00yFHRnqtH"
+);
 
 
 function App() {
@@ -43,40 +44,45 @@ function App() {
     });
   }, []);
 
+
   return (
+
+    //BEM
     <Router>
-      <div className="app">
-        <Switch>
+    <div className="app">
+  
+      <Switch>
+        <Route path="/checkout">
+          <Header />
+          <Checkout/>
+        </Route>
 
-          <Route path="/orders">
-            <Header />
-            <Orders />
-          </Route>
+         <Route path="/orders">
+           <Header />
+           <Orders />
+         </Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
 
-          <Route path="/checkout">
-            <Header />
-            <Checkout />
-          </Route>
-
-          <Route path="/payment">
-            <Header />
+        <Route path="/payment">
+        <Header />
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+            
           </Route>
 
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
-
-        </Switch>
-      </div>
+        <Route path="/">
+          <Header />
+          <Home />
+        </Route>
+      </Switch>
+    </div>
     </Router>
+     
+
   );
 }
 
