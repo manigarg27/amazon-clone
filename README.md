@@ -1,6 +1,6 @@
 # `amazon-clone`
 ### `Frontend`
-### HTML,CSS,JavaScript,ReactJS
+### HTML5,CSS3,JavaScript,ReactJS
 ![License](https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg) 
 ![License](https://www.vectorlogo.zone/logos/netlifyapp_watercss/netlifyapp_watercss-ar21.svg)
 ![License](https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg)
